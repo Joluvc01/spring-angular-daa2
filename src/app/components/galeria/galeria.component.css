@@ -1,0 +1,16 @@
+.container-card{
+	width: 100%;
+	min-width: 640px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+
+
+p{
+    font-size: 50px;
+    font-style: oblique;
+	padding: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}

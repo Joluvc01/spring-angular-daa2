@@ -1,0 +1,26 @@
+<div class="container">
+    <p>Carrito</p>
+    <div *ngIf='cartItems?.length <= 0' class="alert alert-info">
+        No hay items en tu carrito
+    </div>
+    <table class="table">
+        <thead class="thead-dark" *ngIf='cartItems?.length > 0'>
+            <tr>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">DESCRIPCION</th>
+                <th scope="col">PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartItems">
+                <td>{{item.nombre}}</td>
+                <td>{{item.descripcion}}</td>
+                <td>{{item.precio}}</td>
+            </tr>
+            <br>
+            <button class="btn btn-danger bg-danger" (click)="dropCart()" *ngIf='cartItems?.length > 0'>Eliminar Producto</button>
+        </tbody>
+    </table>
+</div>
+
+

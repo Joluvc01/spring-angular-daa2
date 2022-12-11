@@ -1,0 +1,28 @@
+<div>
+    <form action="#" target="" method="get" name="formDatosPersonales">
+
+        <p>{{titulo}}</p>
+
+        <label for="nombre">NOMBRE</label>
+        <input name="nombre" [(ngModel)]="cliente.nombre" />
+
+        <label for="apellido">APELLIDO</label>
+        <input name="apellido" [(ngModel)]="cliente.apellido" />
+
+        <label for="fnac">NACIMIENTO</label>
+        <input name="fnac" type="date" [(ngModel)]="cliente.createAt" />
+
+        <label for="email">EMAIL</label>
+        <input name="email" [(ngModel)]="cliente.email" />
+
+        <label for="foto">FOTO</label>
+        <input type="text" class="form-control" name="foto" [(ngModel)]="cliente.foto">
+
+        <br>
+        <button class="btn btn-success" role="button" (click)='create()'
+            *ngIf="!cliente.id else elseBlock">Registrar</button>
+        <ng-template #elseBlock>
+            <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+        </ng-template>
+    </form>
+</div>

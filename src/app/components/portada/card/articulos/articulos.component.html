@@ -1,0 +1,13 @@
+<div class="title-cards">
+    <h2>Categorias</h2>
+</div>
+<div class="container-card">
+    <div *ngFor="let cat of categorias" class="card">
+        <figure>
+            <img src={{cat.foto}}>
+        </figure>
+        <div class="contenido-card">
+            <h3>{{cat.nombre}}</h3>
+        </div>
+    </div>
+</div>

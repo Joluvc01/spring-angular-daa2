@@ -1,0 +1,30 @@
+<br>
+<button class="btn btn-info" type="button" [routerLink]="['/categorias/form']">Nuevo Categoria</button>
+<div>
+    <br>
+    <div *ngIf='categorias?.length == 0' class="alert alert-info">
+        No hay registros en la base de datos!
+    </div>
+    <table class="table table-bordered table-striped" *ngIf="categorias?.length>0">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cat of categorias">
+                <td scope="row">{{cat.id}}</td>
+                <td>{{cat.nombre}}</td>
+                <td>
+                    <boton class="btn btn-primary"
+                        [routerLink]="['/categorias/form',cat.id]">Editar</boton>
+
+                    <button class="btn btn-danger" (click)="delete(cat)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

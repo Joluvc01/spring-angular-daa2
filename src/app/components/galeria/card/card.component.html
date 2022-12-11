@@ -1,0 +1,11 @@
+<div class="card">
+        <figure>
+            <img [src]="prods.foto">
+        </figure>
+        <div class="contenido-card">
+            <h3>{{prods.nombre}}</h3>
+            <p>{{prods.descripcion}}</p>
+            <p>S/. {{prods.precio}}</p>
+            <a (click)="addCart()">Agregar al Carrito</a>
+        </div>
+    </div>

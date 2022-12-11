@@ -1,0 +1,37 @@
+*{box-sizing:border-box;}
+
+p{
+    font-size: 50px;
+    font-style: oblique;
+	padding: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}
+
+form{
+	width: 440px;
+    display: grid;
+    justify-content:center;
+	padding:30px;
+	border-radius:10px;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+    padding:5px;
+}
+
+form input,
+form select{
+	width:380px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+    padding:5px;
+}
